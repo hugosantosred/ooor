@@ -61,7 +61,7 @@ module Ooor
           display_name = @associations[method_name][1]
         end
         rel = self.class.many2one_associations[method_name]['relation']
-        self.class.const_get(rel).new({id: id, _display_name: display_name}, [], true, false, true)
+        self.class.const_get(rel).new({id: id, _display_name: display_name}, [], true, false, false)
 #        self.class.const_get(rel).find(id, arguments.extract_options!)
       end
     end
